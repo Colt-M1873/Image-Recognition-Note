@@ -1,3 +1,44 @@
+MATLAB  Matrix Laboratory
+
+
+定义函数
+
+
+复合函数compose
+反函数finverse
+
+
+dirac冲激函数
+exp指数
+乘和点乘
+tripuls三角信号
+rectpuls方波
+
+Xr=real(X);        %取实部   
+Xi=imag(X);       %取虚部
+Xa=abs(X);        %取模
+Xn=angle(X);      %取相位
+
+符号函数是啥？
+Matlab符号变量
+
+正弦信号符号算法
+syms t                         %定义符号变量t
+y=sin(pi/4*t)                    %符号函数表达式
+ezplot(y,[-16,16])                %符号函数画图命令
+或者
+f=sym('sin(pi/4*t)')               %定义符号函数表达式
+ezplot(f,[-16,16])
+
+
+heaviside单位阶跃
+
+
+
+
+
+
+
 clc清屏
 clear清工作区
 clf清除图形
