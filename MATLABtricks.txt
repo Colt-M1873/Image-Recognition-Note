@@ -8,6 +8,10 @@ figure函数新建图窗，figure函数中有很多内容，以后慢慢整理�
 plot函数内容整理
 
 subplot（m行n列当前第p张图像）
+subplot(3,4,[2 3 4 6 7 8 10 11 12])可将下面的一张图定位到占据图窗中12格里的右侧9格位置
+
+
+
 madjust()函数调节图像的对比度
 bw的意思是black&white
 
@@ -25,8 +29,9 @@ imhist（i，n）n为指定灰度级显示直方图；
 
 
 
-strel——structuring element 运用各种形状和大小构造元素
+strel——structuring element 运用各种形状和大小构造元素，可用于图像的形态学运算如膨胀腐蚀等
 
 功能：regionprops(英文get the properties of region)用来度量图像区域属性的函数.常用来统计被标记的区域的面积分布，显示区域总数。
 语法：STATS = regionprops(L,properties)
 描 述：测量标注矩阵 L中每一个标注区域的一系列属性。L 中不同的正整数元素对应不同的区域， 例如：L 中等于整数1的元素对应区域1；L 中等于整数2的元素对应区域2;以此类推。
+
