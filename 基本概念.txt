@@ -75,7 +75,7 @@ matlab里有连通域标记的函数bwlabel，具体自己help吧
 求中值也有这函数的，median（A）
 别的就很随意了 
 
-bwareaopen
+bwareaopen删除小面积对象
 bwarea
 imclearborder
 
@@ -84,3 +84,6 @@ bw仅限于二值图像，canny可辨别普通灰度图
 
 
 ostu阈值分割+连通区域法
+
+
+蛇模型，对偶轮廓
