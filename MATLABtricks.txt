@@ -75,4 +75,5 @@ strel——structuring element 运用各种形状和大小构造元素，可用�
 功能：regionprops(英文get the properties of region)用来度量图像区域属性的函数.常用来统计被标记的区域的面积分布，显示区域总数。
 语法：STATS = regionprops(L,properties)
 描 述：测量标注矩阵 L中每一个标注区域的一系列属性。L 中不同的正整数元素对应不同的区域， 例如：L 中等于整数1的元素对应区域1；L 中等于整数2的元素对应区域2;以此类推。
-
+matlab中subs()是符号计算函数，表示将符号表达式中的某些符号变量替换为指定的新的变量，常用调用方式为：
+subs(S,OLD,NEW) 表示将符号表达式S中的符号变量OLD替换为新的值NEW。
