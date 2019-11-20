@@ -87,3 +87,12 @@ ostu阈值分割+连通区域法
 
 
 蛇模型，对偶轮廓
+
+
+HSV模型Hue色调Saturation饱和度Value明度
+
+HSI模型H定义波长S为饱和度I为强度
+
+
+
+
