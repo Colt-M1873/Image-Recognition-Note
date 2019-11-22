@@ -1,7 +1,9 @@
 clear
 clc
 %origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\501.BMP');
-origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\D2HW_TIXgAAcJ8O.jpg');
+%origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\D2HW_TIXgAAcJ8O.jpg');
+origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\mensweardog.jpg');
+
 figure(1)
 imshow(origImg);
 R=origImg(:,:,1);
@@ -36,16 +38,25 @@ imshow(origImg2);
 R2=origImg2(:,:,1);
 G2=origImg2(:,:,2);
 B2=origImg2(:,:,3);
+% 
+% c(:,:,1)=imadd(R,R2);%,'uint16');
+% c(:,:,2)=imadd(G,G2);%,'uint16');
+% c(:,:,3)=imadd(B,B2);%,'uint16');
+% imshow(c)
+% title('Modulated')
+%%
+[m1,n1,l1] = size(origImg2)
+[m2,n2,l2] = size(origImg)
+t = zeros(m1,n1,l1); 
+t = uint8(t);
 
-c(:,:,1)=imadd(R,R2);%,'uint16');
-c(:,:,2)=imadd(G,G2);%,'uint16');
-c(:,:,3)=imadd(B,B2);%,'uint16');
-imshow(c)
-title('Modulated')
 
+t((m1/2-m2/2+1):(m1/2+m2/2),(n1/2-n2/2+1):(n1/2+n2/2),:) = origImg2 ;%做居中处理
+C = imadd(0.5*t,origImg2);%乘以0.5对中间小照片做透明处理
+C((m1/2-m2/2+1):(m1/2+m2/2),(n1/2-n2/2+1):(n1/2+n2/2),:) =C((m1/2-m2/2+1):(m1/2+m2/2),(n1/2-n2/2+1):(n1/2+n2/2),:)-origImg((m1/2-m2/2+1):(m1/2+m2/2),(n1/2-n2/2+1):(n1/2+n2/2),:).*0.5;  %对pic_1乘以0.5做补偿处理
 
-
-
+figure(7)
+imshow(C);
 
 %%
 % %平滑滤波  
