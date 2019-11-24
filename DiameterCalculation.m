@@ -7,7 +7,7 @@
 
 clear
 
-origImg=imread('C:\Users\lenovo\MVS\Data\沙尘图像\小颗粒\1.bmp');
+origImg=imread('C:\Users\lenovo\MVS\Data\沙尘图像\小颗粒\Image_20191104221334330.bmp');
 %origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\501.BMP');
 figure('Position',[200,40,900,500],'name','连通区域法计数');
 subplot(341)
