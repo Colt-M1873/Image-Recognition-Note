@@ -1,5 +1,5 @@
 MATLAB  Matrix Laboratory
-
+imwrite(fuse, 'D:\op\qwfazstest.jpg');
 
 定义函数
 
