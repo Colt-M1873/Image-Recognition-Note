@@ -6,7 +6,7 @@
 %确定背景色可用直方图结合斜率来判断，背景色一般是面积最大的颜色，因此在直方图中最高，因此只需找直方图斜率最大的部分即可作为阈值。
 
 clear
-origImg=imread('C:\Users\lenovo\MVS\Data\沙尘图像\小颗粒\1.bmp');
+origImg=imread('D:\MVS_Data(照片)\沙尘图像\小颗粒\1.bmp');
 %origImg=imread('C:\Users\lenovo\MVS\Data\沙尘图像\小颗粒\Image_20191104221334330.bmp');
 %origImg=imread('C:\Users\lenovo\Documents\MATLAB\imageProcessing\501.BMP');
 figure('Position',[200,40,900,500],'name','连通区域法计数');
