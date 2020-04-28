@@ -25,10 +25,10 @@ for q=1:num
 end
 maxDiameter=ceil(D(num));
 diameternumber=zeros(maxDiameter,1);
-for diameter=1:maxDiameter
+for diameter=1:maxDiameter%此处1不对，应该改成从0开始
     for q=1:num
         if D(q)>diameter&&D(q)<=(diameter+1)
-            diameternumber(diameter)=diameternumber(diameter)+1;
+            diameternumber(diameter)=diameternumber(diameter)+1;%下标改成diameter+1
         end
     end
 end
