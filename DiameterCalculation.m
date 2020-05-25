@@ -30,8 +30,8 @@ imshow(grayImg);
 title("Gray Image");
 %%
 %二值化处理
-%level=graythresh(grayImg)%利用最大类间方差法（Otsu）找到图片的一个合适阈值（0-1之间）
-level=195/255%此处阈值可不用最大类间方差法，而是直接选择直方图中增长最快斜率最大部分的亮度，斜率最大的部分表示沙尘与背景的分界
+level=graythresh(grayImg)%利用最大类间方差法（Otsu）找到图片的一个合适阈值（0-1之间）
+%level=195/255%此处阈值可不用最大类间方差法，而是直接选择直方图中增长最快斜率最大部分的亮度，斜率最大的部分表示沙尘与背景的分界
 bwImg=imbinarize(grayImg,level);%此处可在level前后进行加减以达到类似膨胀或者腐蚀的效果
 subplot(345);
 imshow(bwImg);
@@ -74,6 +74,7 @@ for i=1:num-1
         end
     end
 end
+area.Area
 D=zeros(num,1);
 for q=1:num
     D(q)=sqrt(area(q).Area/3.1415926)*2;%该直径的单位为50um
